@@ -1,12 +1,15 @@
 {% extends "index.html" %} {% block main %}
 <form class="signup">
-  <div>
+  <div class="cover">
     <label for="login">Логін</label>
     <input type="text" id="login" />
   </div>
-  <div>
+  <div class="cover password">
     <label for="password">Пароль</label>
-    <input type="text" id="password" />
+    <input type="password" id="password" />
+  </div>
+  <div class="submit">
+    <button class="submit" type="submit">Зареєструватись</button>
   </div>
 </form>
 {% endblock %}

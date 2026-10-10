@@ -6,6 +6,15 @@ body {
 header {
   border-bottom: 2px solid black;
   box-shadow: 0px 5px 10px black;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+}
+header p {
+  font-size: 20px;
+  font-weight: 700;
+  font-family: sans-serif;
+  color: rgb(109, 43, 10);
 }
 nav {
   height: 60px;

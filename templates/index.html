@@ -12,6 +12,9 @@
         <a href="/">Головна</a>
         <a href="/signup">Реєстрація</a>
       </nav>
+      {% if user %}
+      <p>{{user}}</p>
+      {% endif %}
     </header>
     <main>
       <div class="container">

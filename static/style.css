@@ -23,11 +23,18 @@ nav {
   align-items: center;
   gap: 20px;
 }
-nav a {
+nav a,
+header a {
   font-size: 20px;
   font-family: sans-serif;
   color: rgb(109, 43, 10);
   text-decoration: none;
+}
+
+.login-block {
+  display: flex;
+  align-items: center;
+  gap: 30px;
 }
 
 .container {

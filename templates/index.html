@@ -10,11 +10,17 @@
     <header>
       <nav>
         <a href="/">Головна</a>
+        {% if not user %}
         <a href="/signup">Реєстрація</a>
+        <a href="/signin">Вхід</a>
+        {% endif %}
       </nav>
+      <div class="login-block">
       {% if user %}
-      <p>{{user}}</p>
+        <p>{{user}}</p>
+        <a href="/logout">Вихід</a>
       {% endif %}
+      </div>
     </header>
     <main>
       <div class="container">

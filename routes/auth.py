@@ -20,7 +20,7 @@ def signin():
     if session.get("user"):
         return redirect("/")
     
-    return render_template("signup.html")
+    return render_template("signin.html")
 
 
 @auth.route("/signup", methods = ['GET', "POST"])

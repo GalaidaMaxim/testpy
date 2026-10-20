@@ -1,18 +1,20 @@
 <header>
-  <nav>
-    <a href="/">Головна</a>
-    {% if not user %}
-    <a href="/signup">Реєстрація</a>
-    <a href="/signin">Вхід</a>
-    {% else %}
-    <a href="/">Мої загадки</a>
-    <a href="/">Створити</a>
-    {% endif %}
-  </nav>
-  <div class="login-block">
-    {% if user %}
-    <p>{{user}}</p>
-    <a href="/logout">Вихід</a>
-    {% endif %}
+  <div class="container">
+    <nav>
+      <a href="/">Головна</a>
+      {% if not user %}
+      <a href="/signup">Реєстрація</a>
+      <a href="/signin">Вхід</a>
+      {% else %}
+      <a href="/tasks/myTaks">Мої загадки</a>
+      <a href="/tasks/createTask">Створити</a>
+      {% endif %}
+    </nav>
+    <div class="login-block">
+      {% if user %}
+      <p>{{user}}</p>
+      <a href="/logout">Вихід</a>
+      {% endif %}
+    </div>
   </div>
 </header>

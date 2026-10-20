@@ -1,0 +1,19 @@
+{% extends "index.html" %} {% block main %}
+<form method="post" class="signup">
+  <h2>Створення</h2>
+  <div class="cover">
+    <label for="login">Питання</label>
+    <input name="login" type="text" id="login" />
+  </div>
+  <div class="cover password">
+    <label for="password">Відповідь</label>
+    <input name="password" type="password" id="password" />
+  </div>
+  <div class="submit">
+    <button class="submit" type="submit">Зареєструватись</button>
+  </div>
+  {% if errorMessage %}
+  <p class="error-message">{{errorMessage}}</p>
+  {% endif %}
+</form>
+{% endblock %}

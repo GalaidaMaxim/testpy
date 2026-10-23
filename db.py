@@ -54,3 +54,15 @@ def getUser(name, password):
 
 getUser("Galaida", 12345)
 # 9cQNtmZetBvJi0jM
+
+def createTask(text, answer, user):
+    cursor = connect.cursor()
+    try:
+        cursor.execute('INSERT INTO task ("text", "ansver", "user") VALUES (%s, %s, %s)',(text, answer, user)
+)
+        connect.commit()
+        cursor.close()
+    except NameError:
+        connect.rollback()
+        cursor.close()
+        print(NameError)

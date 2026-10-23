@@ -1,0 +1,46 @@
+form {
+  width: 700px;
+  margin-left: auto;
+  margin-right: auto;
+  border: 3px solid brown;
+  margin-top: 80px;
+  border-radius: 40px;
+  padding: 30px;
+  box-shadow: 5px 5px 10px rgb(58, 58, 58);
+  & input {
+    width: 100%;
+    height: 40px;
+    background-color: transparent;
+    border: none;
+    font-size: 18px;
+  }
+  & input:focus-visible {
+    outline: none;
+  }
+  & label {
+    font-size: 20px;
+    font-family: sans-serif;
+    color: rgb(109, 43, 10);
+    text-decoration: none;
+  }
+  & .cover {
+    border-bottom: 2px solid brown;
+  }
+
+  & .password {
+    margin-top: 10px;
+  }
+  & .submit {
+    text-align: center;
+  }
+
+  & button {
+    background-color: brown;
+    padding: 15px;
+    border: none;
+    margin-top: 30px;
+    border-radius: 20px;
+    color: white;
+    font-size: 20px;
+  }
+}

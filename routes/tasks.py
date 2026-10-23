@@ -8,7 +8,9 @@ def myTasks():
     user = session.get("user")
     if not user:
         return redirect("/")
-    return render_template("tasks.html", user = user["name"] if user else None)
+    data = db.getTaskByUserID(user["id"])
+    print(data)
+    return render_template("tasks.html", user = user["name"] if user else None, items=data)
     
 @tasks.route("/createTask", methods = ['GET', "POST"])
 def createTask():

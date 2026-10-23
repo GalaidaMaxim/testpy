@@ -14,9 +14,6 @@ def main():
 
     return render_template("main.html", user = user["name"] if user else False)
 
-
-
-
 if __name__ == "__main__":
     app.run(debug=True)
 

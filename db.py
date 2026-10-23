@@ -52,8 +52,6 @@ def getUser(name, password):
     
 
 
-getUser("Galaida", 12345)
-# 9cQNtmZetBvJi0jM
 
 def createTask(text, answer, user):
     cursor = connect.cursor()
@@ -66,3 +64,23 @@ def createTask(text, answer, user):
         connect.rollback()
         cursor.close()
         print(NameError)
+
+
+def getTaskByUserID(userID):
+    cursor = connect.cursor()
+    print(type (userID))
+    try:
+        cursor.execute('SELECT * FROM task WHERE "user" = %s',(userID,))
+        data = cursor.fetchall()
+        cursor.close()
+        res = []
+        for item in data:
+            res.append({
+                "text": item[1],
+                "answer": item[2]
+            })
+        return res
+    except NameError:
+        cursor.close()
+        print(NameError)
+    

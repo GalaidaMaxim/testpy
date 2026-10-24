@@ -1,0 +1,18 @@
+{% extends "index.html" %} {% block main %}
+<form method="post" class="signup">
+  <div class="cover">
+    <label for="login">Логін</label>
+    <input name="login" type="text" id="login" />
+  </div>
+  <div class="cover password">
+    <label for="password">Пароль</label>
+    <input name="password" type="password" id="password" />
+  </div>
+  <div class="submit">
+    <button class="submit" type="submit">Увійти</button>
+  </div>
+  {% if errorMessage %}
+  <p class="error-message">{{errorMessage}}</p>
+  {% endif %}
+</form>
+{% endblock %}

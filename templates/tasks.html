@@ -1,0 +1,7 @@
+{% extends "index.html" %} {% block main %}
+<h1>Мої загадки</h1>
+<div class="cardGrid">
+  {% for item in items %} {% with text=item['text'], answer=item['answer'] %} {%
+  include "components/taskCard.html" %} {% endwith %} {% endfor %} {% endblock
+  %}
+</div>

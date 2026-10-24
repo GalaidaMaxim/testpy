@@ -11,5 +11,8 @@
   <div class="submit">
     <button class="submit" type="submit">Зареєструватись</button>
   </div>
+  {% if errorMessage %}
+  <p class="error-message">{{errorMessage}}</p>
+  {% endif %}
 </form>
 {% endblock %}

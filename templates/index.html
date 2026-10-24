@@ -7,15 +7,7 @@
     <title>Document</title>
   </head>
   <body>
-    <header>
-      <nav>
-        <a href="/">Головна</a>
-        <a href="/signup">Реєстрація</a>
-      </nav>
-      {% if user %}
-      <p>{{user}}</p>
-      {% endif %}
-    </header>
+    {% include "./components/header.html" %}
     <main>
       <div class="container">
       {% block main %}{% endblock %}
